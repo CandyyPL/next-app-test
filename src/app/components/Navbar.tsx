@@ -9,15 +9,8 @@ const Navbar = async () => {
   return (
     <header className='px-5 py-3 bg-white shadow-sm font-work-sans'>
       <nav className='flex justify-between items-center'>
-        <Link href='/' className='flex justify-between items-center'>
-          <Image
-            src='/youtube.png'
-            alt='logo'
-            width={50}
-            height={50}
-            className='pr-2'
-          />
-          <span className='text-xl'>iSmasTube</span>
+        <Link href='/'>
+          <Image src='/logo.png' alt='logo' width={144} height={30} />
         </Link>
 
         <div className='flex items-center gap-5 font-black'>
