@@ -12,6 +12,8 @@
 
   --color-app-secondary: #F3A916;
 
+  --color-app-ground: #162E3C;
+
   --color-app-black-100: #333333;
   --color-app-black-200: #141413;
   --color-app-black-300: #7D8087;
@@ -29,7 +31,7 @@
 
 @layer utilities {
   .pink-container {
-    @apply w-full bg-app-primary min-h-[530px] flex flex-col justify-center items-center;
+    @apply w-full bg-gradient-to-tr from-app-ground to-app-primary min-h-[530px] flex flex-col justify-center items-center;
   }
 
   .heading {
@@ -109,7 +111,7 @@
   }
 
   .startup-card_desc {
-    @apply font-normal text-[16px] line-clamp-2 my-3 text-app-black-100 break-all;
+    @apply font-normal text-[16px] line-clamp-2 my-3 text-app-black-100;
   }
 
   .startup-card_img {

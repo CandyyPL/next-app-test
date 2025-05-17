@@ -49,7 +49,7 @@ const StartupCard = ({ post }: { post: TStartupPost }) => {
       </div>
 
       <Link href={`/startup/${_id}`}>
-        <p className='startup_card-desc'>{description}</p>
+        <p className='startup-card_desc'>{description}</p>
         <img src={image} alt='image' className='startup-card_img mt-2' />
       </Link>
 

@@ -56,8 +56,9 @@ const workSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Next Test App',
-  description: 'Learning to Next JS',
+  title: 'Kickthrow | Pitch your Startup',
+  description:
+    'Submit ideas, vote on pitches, and get noticed in Virtual Competitions.',
 }
 
 export default function RootLayout({

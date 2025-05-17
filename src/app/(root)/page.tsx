@@ -14,9 +14,8 @@ const Home = async ({
 }) => {
   const query = (await searchParams).query
 
-  const posts = (await client.fetch(STARTUPS_QUERY)) as TStartupPost[]
-
-  console.log(posts)
+  const params = { search: query || null }
+  const posts = (await client.fetch(STARTUPS_QUERY, params)) as TStartupPost[]
 
   return (
     <>
