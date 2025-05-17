@@ -4,8 +4,9 @@ import { Eye } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './ui/button'
+import { TStartupPost } from '@/app/(root)/page'
 
-const StartupCard = ({ post }: { post: TStartupCard }) => {
+const StartupCard = ({ post }: { post: TStartupPost }) => {
   const {
     _createdAt,
     _id,
@@ -53,7 +54,7 @@ const StartupCard = ({ post }: { post: TStartupCard }) => {
       </Link>
 
       <div className='flex-between gap-3 mt-5'>
-        <Link href={`/?query=${category.toLowerCase()}`}>
+        <Link href={`/?query=${category?.toLowerCase()}`}>
           <p className='text-16-medium'>{category}</p>
         </Link>
         <Button className='startup-card_btn' asChild>

@@ -1,6 +1,11 @@
 import React from 'react'
 import SearchForm from '@/components/SearchForm'
 import StartupCard from '@/components/StartupCard'
+import STARTUPS_QUERY from '@/sanity/lib/queries'
+import { client } from '@/sanity/lib/client'
+import { Author, Startup } from '@/sanity/types'
+
+export type TStartupPost = Omit<Startup, 'author'> & { author?: Author }
 
 const Home = async ({
   searchParams,
@@ -9,21 +14,9 @@ const Home = async ({
 }) => {
   const query = (await searchParams).query
 
-  const posts = [
-    {
-      _createdAt: new Date(),
-      views: 50,
-      author: {
-        _id: 0,
-        name: 'John Doe',
-      },
-      _id: 0,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      image: 'https://picsum.photos/640/480',
-      category: 'Robots',
-      title: 'We Robots',
-    },
-  ]
+  const posts = (await client.fetch(STARTUPS_QUERY)) as TStartupPost[]
+
+  console.log(posts)
 
   return (
     <>
@@ -47,7 +40,7 @@ const Home = async ({
 
         <ul className='mt-7 card-grid'>
           {posts?.length > 0
-            ? posts.map((post: TStartupCard) => (
+            ? posts.map((post: TStartupPost) => (
                 <StartupCard key={post._id} post={post} />
               ))
             : ''}
