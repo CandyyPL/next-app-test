@@ -1,16 +1,35 @@
 @import 'tailwindcss';
+@plugin 'tailwindcss-animate';
+@plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-work-sans: 'Work Sans', sans-serif;
+  --font-work-sans: var(--font-work-sans);
 
-  --color-pink: #F5005E;
+  --color-app-primary: #EE2B69;
+  --color-app-primary-100: #FFE8F0;
+
+  --color-app-secondary: #FBE843;
+
+  --color-app-black-100: #333333;
+  --color-app-black-200: #141413;
+  --color-app-black-300: #7D8087;
+
+  --color-app-white-100: #F7F7F7;
+}
+
+@layer base {
+  /* base */
+}
+
+@layer components {
+  /* components */
 }
 
 @layer utilities {
   .pink-container {
-    @apply w-full bg-pink min-h-[530px] flex flex-col justify-center items-center;
+    @apply w-full bg-app-primary min-h-[530px] flex flex-col justify-center items-center;
   }
 
   .heading {
