@@ -17,7 +17,7 @@ const Home = async ({
         _id: 0,
         name: 'John Doe',
       },
-      _id: 1,
+      _id: 0,
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       image: 'https://picsum.photos/640/480',
       category: 'Robots',

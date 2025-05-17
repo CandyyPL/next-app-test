@@ -12,6 +12,7 @@ const SearchForm = ({ query }: { query?: string }) => {
         defaultValue=''
         className='search-input'
         placeholder='Search Startups'
+        autoComplete='off'
       />
 
       <div className='flex gap-2'>

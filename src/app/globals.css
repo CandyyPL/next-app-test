@@ -7,10 +7,10 @@
 @theme {
   --font-work-sans: var(--font-work-sans);
 
-  --color-app-primary: #EE2B69;
-  --color-app-primary-100: #FFE8F0;
+  --color-app-primary: #DE3F4C;
+  --color-app-primary-100: #F9DCDE;
 
-  --color-app-secondary: #FBE843;
+  --color-app-secondary: #F3A916;
 
   --color-app-black-100: #333333;
   --color-app-black-200: #141413;
@@ -41,7 +41,7 @@
   }
 
   .search-form {
-    @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+    @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[20px] mt-8 px-5 flex flex-row items-center gap-5;
   }
 
   .search-input {
