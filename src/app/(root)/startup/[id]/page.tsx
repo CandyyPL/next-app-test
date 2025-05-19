@@ -23,7 +23,7 @@ const StartupPage = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <>
-      <section className='hero-container'>
+      <section className='hero-container !min-h-[450px]'>
         <p className='tag !bg-app-secondary'>{formatDate(post._createdAt)}</p>
 
         <h1 className='heading'>{post.title}</h1>

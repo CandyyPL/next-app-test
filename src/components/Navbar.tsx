@@ -10,7 +10,7 @@ const Navbar = async () => {
   return (
     <header className='px-5 py-3 bg-white shadow-sm font-work-sans'>
       <nav className='flex justify-between items-center'>
-        <Link href='/public' className='flex gap-3 items-center'>
+        <Link href='/' className='flex gap-3 items-center'>
           <Image src='/throw.png' alt='logo' width={32} height={32} />
           <span className='text-30-bold'>
             Kick<span className='text-app-primary'>throw</span>
