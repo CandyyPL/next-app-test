@@ -1,7 +1,7 @@
 import React from 'react'
 import SearchForm from '@/components/SearchForm'
 import StartupCard from '@/components/StartupCard'
-import STARTUPS_QUERY from '@/sanity/lib/queries'
+import { STARTUPS_QUERY } from '@/sanity/lib/queries'
 import { client } from '@/sanity/lib/client'
 import { Author, Startup } from '@/sanity/types'
 
@@ -19,7 +19,7 @@ const Home = async ({
 
   return (
     <>
-      <section className='pink-container'>
+      <section className='hero-container'>
         <h1 className='heading'>
           Pitch your startup, connect with entrepreneurs
         </h1>
