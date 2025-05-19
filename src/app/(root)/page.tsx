@@ -1,21 +1,22 @@
-import React from 'react'
-import SearchForm from '@/components/SearchForm'
-import StartupCard from '@/components/StartupCard'
-import { STARTUPS_QUERY } from '@/sanity/lib/queries'
-import { client } from '@/sanity/lib/client'
-import { Author, Startup } from '@/sanity/types'
+import React from 'react';
+import SearchForm from '@/components/SearchForm';
+import StartupCard from '@/components/StartupCard';
+import { STARTUPS_QUERY } from '@/sanity/lib/queries';
+import { client } from '@/sanity/lib/client';
+import { Author, Startup } from '@/sanity/types';
+import { auth } from '@/auth';
 
-export type TStartupPost = Omit<Startup, 'author'> & { author?: Author }
+export type TStartupPost = Omit<Startup, 'author'> & { author?: Author };
 
 const Home = async ({
   searchParams,
 }: {
-  searchParams: Promise<{ query?: string }>
+  searchParams: Promise<{ query?: string }>;
 }) => {
-  const query = (await searchParams).query
+  const query = (await searchParams).query;
 
-  const params = { search: query || null }
-  const posts = (await client.fetch(STARTUPS_QUERY, params)) as TStartupPost[]
+  const params = { search: query || null };
+  const posts = (await client.fetch(STARTUPS_QUERY, params)) as TStartupPost[];
 
   return (
     <>
@@ -46,7 +47,7 @@ const Home = async ({
         </ul>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

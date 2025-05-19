@@ -7,18 +7,18 @@
 @theme {
   --font-work-sans: var(--font-work-sans);
 
-  --color-app-primary: #DE3F4C;
-  --color-app-primary-100: #F9DCDE;
+  --color-app-primary: #de3f4c;
+  --color-app-primary-100: #f9dcde;
 
-  --color-app-secondary: #F3A916;
+  --color-app-secondary: #f3a916;
 
-  --color-app-ground: #162E3C;
+  --color-app-ground: #162e3c;
 
   --color-app-black-100: #333333;
   --color-app-black-200: #141413;
-  --color-app-black-300: #7D8087;
+  --color-app-black-300: #7d8087;
 
-  --color-app-white-100: #F7F7F7;
+  --color-app-white-100: #f7f7f7;
 }
 
 @layer base {
@@ -132,6 +132,10 @@
 
   .tag {
     @apply bg-secondary px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;
+  }
+
+  .category-tag {
+    @apply font-medium text-[16px] bg-app-primary-100 px-4 py-2 rounded-full;
   }
 
   .no-result {

@@ -1,8 +1,8 @@
-import type { Metadata } from 'next'
-import React from 'react'
-import './globals.css'
-import localFont from 'next/font/local'
-import 'easymde/dist/easymde.min.css'
+import type { Metadata } from 'next';
+import React from 'react';
+import './globals.css';
+import localFont from 'next/font/local';
+import 'easymde/dist/easymde.min.css';
 
 const workSans = localFont({
   src: [
@@ -53,22 +53,22 @@ const workSans = localFont({
     },
   ],
   variable: '--font-work-sans',
-})
+});
 
 export const metadata: Metadata = {
   title: 'Kickthrow | Pitch your Startup',
   description:
     'Submit ideas, vote on pitches, and get noticed in Virtual Competitions.',
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang='en'>
       <body className={workSans.variable}>{children}</body>
     </html>
-  )
+  );
 }

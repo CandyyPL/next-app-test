@@ -1,15 +1,15 @@
-'use client'
+'use client';
 
-import { X } from 'lucide-react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { X } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const SearchFormReset = () => {
   const reset = () => {
-    const form = document.querySelector('.search-form') as HTMLFormElement
+    const form = document.querySelector('.search-form') as HTMLFormElement;
 
-    if (form) form.reset()
-  }
+    if (form) form.reset();
+  };
 
   return (
     <Button type='reset' onClick={reset} className='search-btn cursor-pointer'>
@@ -17,7 +17,7 @@ const SearchFormReset = () => {
         <X className='size-5' />
       </Link>
     </Button>
-  )
-}
+  );
+};
 
-export default SearchFormReset
+export default SearchFormReset;

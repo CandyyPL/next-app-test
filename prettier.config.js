@@ -1,7 +1,7 @@
 // @type {import("prettier").Config}
 
 const config = {
-  semi: false,
+  semi: true,
   singleQuote: true,
   jsxSingleQuote: true,
   trailingComma: 'es5',
@@ -9,6 +9,6 @@ const config = {
   tabWidth: 2,
   useTabs: false,
   bracketSpacing: true,
-}
+};
 
-export default config
+export default config;

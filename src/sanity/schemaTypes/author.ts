@@ -1,5 +1,5 @@
-import { defineType, defineField } from 'sanity'
-import { UserIcon } from 'lucide-react'
+import { defineType, defineField } from 'sanity';
+import { UserIcon } from 'lucide-react';
 
 const author = defineType({
   name: 'author',
@@ -19,6 +19,6 @@ const author = defineType({
       title: 'name',
     },
   },
-})
+});
 
-export default author
+export default author;

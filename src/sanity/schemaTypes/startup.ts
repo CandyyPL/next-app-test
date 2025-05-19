@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity'
+import { defineType, defineField } from 'sanity';
 
 const startup = defineType({
   name: 'startup',
@@ -23,6 +23,6 @@ const startup = defineType({
     }),
     defineField({ name: 'pitch', type: 'markdown' }),
   ],
-})
+});
 
-export default startup
+export default startup;

@@ -1,10 +1,10 @@
-import React from 'react'
-import { formatDate } from '@/lib/utils'
-import { Eye } from 'lucide-react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Button } from './ui/button'
-import { TStartupPost } from '@/app/(root)/page'
+import React from 'react';
+import { formatDate } from '@/lib/utils';
+import { Eye } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from './ui/button';
+import { TStartupPost } from '@/app/(root)/page';
 
 const StartupCard = ({ post }: { post: TStartupPost }) => {
   const {
@@ -16,7 +16,7 @@ const StartupCard = ({ post }: { post: TStartupPost }) => {
     category,
     description,
     image,
-  } = post
+  } = post;
 
   return (
     <li className='startup-card group'>
@@ -55,14 +55,14 @@ const StartupCard = ({ post }: { post: TStartupPost }) => {
 
       <div className='flex-between gap-3 mt-5'>
         <Link href={`/?query=${category?.toLowerCase()}`}>
-          <p className='text-16-medium'>{category}</p>
+          <p className='text-16-medium category-tag'>{category}</p>
         </Link>
         <Button className='startup-card_btn' asChild>
           <Link href={`/startup/${_id}`}>Details</Link>
         </Button>
       </div>
     </li>
-  )
-}
+  );
+};
 
-export default StartupCard
+export default StartupCard;

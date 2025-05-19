@@ -1,25 +1,25 @@
-import React from 'react'
-import { SINGLE_STARTUP_QUERY } from '@/sanity/lib/queries'
-import { client } from '@/sanity/lib/client'
-import { notFound } from 'next/navigation'
-import { formatDate } from '@/lib/utils'
-import Link from 'next/link'
-import Image from 'next/image'
-import { TStartupPost } from '@/app/(root)/page'
-import markdownit from 'markdown-it'
+import React from 'react';
+import { SINGLE_STARTUP_QUERY } from '@/sanity/lib/queries';
+import { client } from '@/sanity/lib/client';
+import { notFound } from 'next/navigation';
+import { formatDate } from '@/lib/utils';
+import Link from 'next/link';
+import Image from 'next/image';
+import { TStartupPost } from '@/app/(root)/page';
+import markdownit from 'markdown-it';
 
 const StartupPage = async ({ params }: { params: Promise<{ id: string }> }) => {
-  const { id } = await params
-  const queryParams = { id }
+  const { id } = await params;
+  const queryParams = { id };
 
   const post = (await client.fetch(
     SINGLE_STARTUP_QUERY,
     queryParams
-  )) as TStartupPost
+  )) as TStartupPost;
 
-  if (!post) return notFound()
+  if (!post) return notFound();
 
-  const markdownContent = markdownit().render(post?.pitch || '')
+  const markdownContent = markdownit().render(post?.pitch || '');
 
   return (
     <>
@@ -75,7 +75,7 @@ const StartupPage = async ({ params }: { params: Promise<{ id: string }> }) => {
         {/* TODO: Editor selected startups */}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default StartupPage
+export default StartupPage;

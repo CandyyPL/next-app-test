@@ -14,159 +14,159 @@
 
 // Source: schema.json
 export type SanityImagePaletteSwatch = {
-  _type: 'sanity.imagePaletteSwatch'
-  background?: string
-  foreground?: string
-  population?: number
-  title?: string
-}
+  _type: 'sanity.imagePaletteSwatch';
+  background?: string;
+  foreground?: string;
+  population?: number;
+  title?: string;
+};
 
 export type SanityImagePalette = {
-  _type: 'sanity.imagePalette'
-  darkMuted?: SanityImagePaletteSwatch
-  lightVibrant?: SanityImagePaletteSwatch
-  darkVibrant?: SanityImagePaletteSwatch
-  vibrant?: SanityImagePaletteSwatch
-  dominant?: SanityImagePaletteSwatch
-  lightMuted?: SanityImagePaletteSwatch
-  muted?: SanityImagePaletteSwatch
-}
+  _type: 'sanity.imagePalette';
+  darkMuted?: SanityImagePaletteSwatch;
+  lightVibrant?: SanityImagePaletteSwatch;
+  darkVibrant?: SanityImagePaletteSwatch;
+  vibrant?: SanityImagePaletteSwatch;
+  dominant?: SanityImagePaletteSwatch;
+  lightMuted?: SanityImagePaletteSwatch;
+  muted?: SanityImagePaletteSwatch;
+};
 
 export type SanityImageDimensions = {
-  _type: 'sanity.imageDimensions'
-  height?: number
-  width?: number
-  aspectRatio?: number
-}
+  _type: 'sanity.imageDimensions';
+  height?: number;
+  width?: number;
+  aspectRatio?: number;
+};
 
 export type SanityImageHotspot = {
-  _type: 'sanity.imageHotspot'
-  x?: number
-  y?: number
-  height?: number
-  width?: number
-}
+  _type: 'sanity.imageHotspot';
+  x?: number;
+  y?: number;
+  height?: number;
+  width?: number;
+};
 
 export type SanityImageCrop = {
-  _type: 'sanity.imageCrop'
-  top?: number
-  bottom?: number
-  left?: number
-  right?: number
-}
+  _type: 'sanity.imageCrop';
+  top?: number;
+  bottom?: number;
+  left?: number;
+  right?: number;
+};
 
 export type SanityFileAsset = {
-  _id: string
-  _type: 'sanity.fileAsset'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  originalFilename?: string
-  label?: string
-  title?: string
-  description?: string
-  altText?: string
-  sha1hash?: string
-  extension?: string
-  mimeType?: string
-  size?: number
-  assetId?: string
-  uploadId?: string
-  path?: string
-  url?: string
-  source?: SanityAssetSourceData
-}
+  _id: string;
+  _type: 'sanity.fileAsset';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  originalFilename?: string;
+  label?: string;
+  title?: string;
+  description?: string;
+  altText?: string;
+  sha1hash?: string;
+  extension?: string;
+  mimeType?: string;
+  size?: number;
+  assetId?: string;
+  uploadId?: string;
+  path?: string;
+  url?: string;
+  source?: SanityAssetSourceData;
+};
 
 export type SanityImageAsset = {
-  _id: string
-  _type: 'sanity.imageAsset'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  originalFilename?: string
-  label?: string
-  title?: string
-  description?: string
-  altText?: string
-  sha1hash?: string
-  extension?: string
-  mimeType?: string
-  size?: number
-  assetId?: string
-  uploadId?: string
-  path?: string
-  url?: string
-  metadata?: SanityImageMetadata
-  source?: SanityAssetSourceData
-}
+  _id: string;
+  _type: 'sanity.imageAsset';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  originalFilename?: string;
+  label?: string;
+  title?: string;
+  description?: string;
+  altText?: string;
+  sha1hash?: string;
+  extension?: string;
+  mimeType?: string;
+  size?: number;
+  assetId?: string;
+  uploadId?: string;
+  path?: string;
+  url?: string;
+  metadata?: SanityImageMetadata;
+  source?: SanityAssetSourceData;
+};
 
 export type SanityImageMetadata = {
-  _type: 'sanity.imageMetadata'
-  location?: Geopoint
-  dimensions?: SanityImageDimensions
-  palette?: SanityImagePalette
-  lqip?: string
-  blurHash?: string
-  hasAlpha?: boolean
-  isOpaque?: boolean
-}
+  _type: 'sanity.imageMetadata';
+  location?: Geopoint;
+  dimensions?: SanityImageDimensions;
+  palette?: SanityImagePalette;
+  lqip?: string;
+  blurHash?: string;
+  hasAlpha?: boolean;
+  isOpaque?: boolean;
+};
 
 export type Geopoint = {
-  _type: 'geopoint'
-  lat?: number
-  lng?: number
-  alt?: number
-}
+  _type: 'geopoint';
+  lat?: number;
+  lng?: number;
+  alt?: number;
+};
 
 export type SanityAssetSourceData = {
-  _type: 'sanity.assetSourceData'
-  name?: string
-  id?: string
-  url?: string
-}
+  _type: 'sanity.assetSourceData';
+  name?: string;
+  id?: string;
+  url?: string;
+};
 
 export type Startup = {
-  _id: string
-  _type: 'startup'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  title?: string
-  slug?: Slug
+  _id: string;
+  _type: 'startup';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
   author?: {
-    _ref: string
-    _type: 'reference'
-    _weak?: boolean
-    [internalGroqTypeReferenceTo]?: 'author'
-  }
-  views?: number
-  description?: string
-  category?: string
-  image?: string
-  pitch?: string
-}
+    _ref: string;
+    _type: 'reference';
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: 'author';
+  };
+  views?: number;
+  description?: string;
+  category?: string;
+  image?: string;
+  pitch?: string;
+};
 
 export type Slug = {
-  _type: 'slug'
-  current?: string
-  source?: string
-}
+  _type: 'slug';
+  current?: string;
+  source?: string;
+};
 
 export type Author = {
-  _id: string
-  _type: 'author'
-  _createdAt: string
-  _updatedAt: string
-  _rev: string
-  id?: string
-  name?: string
-  username?: string
-  email?: string
-  image?: string
-  bio?: string
-}
+  _id: string;
+  _type: 'author';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  id?: string;
+  name?: string;
+  username?: string;
+  email?: string;
+  image?: string;
+  bio?: string;
+};
 
-export type Markdown = string
+export type Markdown = string;
 
 export type AllSanitySchemaTypes =
   | SanityImagePaletteSwatch
@@ -182,75 +182,87 @@ export type AllSanitySchemaTypes =
   | Startup
   | Slug
   | Author
-  | Markdown
-export declare const internalGroqTypeReferenceTo: unique symbol
+  | Markdown;
+export declare const internalGroqTypeReferenceTo: unique symbol;
 // Source: ./src/sanity/lib/queries.ts
 // Variable: STARTUPS_QUERY
 // Query: *[_type == 'startup' && defined(slug.current) && !defined($search) || title match $search || category match $search || author->name match $search] | order(_createdAt desc) {    _id,    _createdAt,    author -> {      _id, name    },    title,    slug,    description,    image,    category,    views  }
 export type STARTUPS_QUERYResult = Array<
   | {
-      _id: string
-      _createdAt: string
-      author: null
-      title: null
-      slug: null
-      description: null
-      image: string | null
-      category: null
-      views: null
+      _id: string;
+      _createdAt: string;
+      author: null;
+      title: null;
+      slug: null;
+      description: null;
+      image: string | null;
+      category: null;
+      views: null;
     }
   | {
-      _id: string
-      _createdAt: string
-      author: null
-      title: string | null
-      slug: null
-      description: string | null
-      image: null
-      category: null
-      views: null
+      _id: string;
+      _createdAt: string;
+      author: null;
+      title: string | null;
+      slug: null;
+      description: string | null;
+      image: null;
+      category: null;
+      views: null;
     }
   | {
-      _id: string
-      _createdAt: string
+      _id: string;
+      _createdAt: string;
       author: {
-        _id: string
-        name: string | null
-      } | null
-      title: string | null
-      slug: Slug | null
-      description: string | null
-      image: string | null
-      category: string | null
-      views: number | null
+        _id: string;
+        name: string | null;
+      } | null;
+      title: string | null;
+      slug: Slug | null;
+      description: string | null;
+      image: string | null;
+      category: string | null;
+      views: number | null;
     }
->
+>;
 // Variable: SINGLE_STARTUP_QUERY
 // Query: *[_type == 'startup' && _id == $id][0] {    _id,    _createdAt,    author -> {      _id, name, username, image, bio    },    title,    slug,    description,    image,    category,    views,    pitch  }
 export type SINGLE_STARTUP_QUERYResult = {
-  _id: string
-  _createdAt: string
+  _id: string;
+  _createdAt: string;
   author: {
-    _id: string
-    name: string | null
-    username: string | null
-    image: string | null
-    bio: string | null
-  } | null
-  title: string | null
-  slug: Slug | null
-  description: string | null
-  image: string | null
-  category: string | null
-  views: number | null
-  pitch: string | null
-} | null
+    _id: string;
+    name: string | null;
+    username: string | null;
+    image: string | null;
+    bio: string | null;
+  } | null;
+  title: string | null;
+  slug: Slug | null;
+  description: string | null;
+  image: string | null;
+  category: string | null;
+  views: number | null;
+  pitch: string | null;
+} | null;
+// Variable: AUTHOR_QUERY
+// Query: *[_type == 'author' && id == $id][0] {    id,    _id,    name,    username,    email,    bio,    image  }
+export type AUTHOR_QUERYResult = {
+  id: string | null;
+  _id: string;
+  name: string | null;
+  username: string | null;
+  email: string | null;
+  bio: string | null;
+  image: string | null;
+} | null;
 
 // Query TypeMap
-import '@sanity/client'
+import '@sanity/client';
 declare module '@sanity/client' {
   interface SanityQueries {
-    "\n  *[_type == 'startup' && defined(slug.current) && !defined($search) || title match $search || category match $search || author->name match $search] | order(_createdAt desc) {\n    _id,\n    _createdAt,\n    author -> {\n      _id, name\n    },\n    title,\n    slug,\n    description,\n    image,\n    category,\n    views\n  }\n": STARTUPS_QUERYResult
-    "\n  *[_type == 'startup' && _id == $id][0] {\n    _id,\n    _createdAt,\n    author -> {\n      _id, name, username, image, bio\n    },\n    title,\n    slug,\n    description,\n    image,\n    category,\n    views,\n    pitch\n  }\n": SINGLE_STARTUP_QUERYResult
+    "\n  *[_type == 'startup' && defined(slug.current) && !defined($search) || title match $search || category match $search || author->name match $search] | order(_createdAt desc) {\n    _id,\n    _createdAt,\n    author -> {\n      _id, name\n    },\n    title,\n    slug,\n    description,\n    image,\n    category,\n    views\n  }\n": STARTUPS_QUERYResult;
+    "\n  *[_type == 'startup' && _id == $id][0] {\n    _id,\n    _createdAt,\n    author -> {\n      _id, name, username, image, bio\n    },\n    title,\n    slug,\n    description,\n    image,\n    category,\n    views,\n    pitch\n  }\n": SINGLE_STARTUP_QUERYResult;
+    "\n  *[_type == 'author' && id == $id][0] {\n    id,\n    _id,\n    name,\n    username,\n    email,\n    bio,\n    image\n  }\n": AUTHOR_QUERYResult;
   }
 }

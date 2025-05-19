@@ -1,8 +1,8 @@
-import React from 'react'
-import Form from 'next/form'
-import SearchFormReset from '@/components/SearchFormReset'
-import { Search } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import React from 'react';
+import Form from 'next/form';
+import SearchFormReset from '@/components/SearchFormReset';
+import { Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const SearchForm = ({ query }: { query?: string }) => {
   return (
@@ -22,7 +22,7 @@ const SearchForm = ({ query }: { query?: string }) => {
         </Button>
       </div>
     </Form>
-  )
-}
+  );
+};
 
-export default SearchForm
+export default SearchForm;
